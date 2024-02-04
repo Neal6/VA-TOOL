@@ -1,0 +1,190 @@
+body {
+  background-color: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.todo-app {
+  width: 100%;
+  border-radius: 15px;
+}
+.input-section {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.input-section input[type="text"],
+input[type="number"] {
+  width: 26%;
+  padding: 12px;
+  margin: 4px 8px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+.input-section input[type="text"]::placeholder {
+  color: #4a4a4a;
+  font-size: 12px;
+  font-weight: 600;
+}
+.input-section input[type="text"]:focus {
+  outline: none;
+  background-color: #fcfcfc;
+}
+.input-section input[type="number"]::placeholder {
+  color: #4a4a4a;
+  font-size: 12px;
+  font-weight: 600;
+}
+.input-section input[type="number"]:focus {
+  outline: none;
+  background-color: #fcfcfc;
+}
+
+.input-section textarea[type="text"] {
+  width: 26%;
+  padding: 12px;
+  margin: 4px 8px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  resize: none;
+}
+.input-section textarea[type="text"]::placeholder {
+  color: #4a4a4a;
+  font-size: 12px;
+  font-weight: 600;
+}
+.input-section textarea[type="text"]:focus {
+  outline: none;
+  background-color: #fcfcfc;
+}
+
+.input-section button {
+  padding: 12px 20px;
+  margin-bottom: 6px;
+  margin-left: 8px;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(33, 33, 33);
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+  box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+}
+.input-section button:hover {
+  outline: none;
+  background-color: #555;
+}
+.input-section button[type="text"]::placeholder {
+  color: #ddd;
+}
+.add {
+  margin-right: 10px;
+}
+
+#exportExcel {
+  padding: 16px 20px;
+  text-align: center;
+  margin-top: 16px;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(33, 33, 33);
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+  box-shadow: 9px 21px 30px -19px rgba(0, 0, 0, 0.63);
+}
+
+.todos {
+  margin-top: 8px;
+  height: 370px;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 30px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  overflow: auto;
+}
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.todo-list li {
+  display: flex;
+  align-items: center;
+  padding: 7px 30px;
+  background-color: rgb(38 37 37);
+  border-radius: 80px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.todo-list li span {
+  margin-left: 10px;
+  color: #fff;
+  /* font-size: 13px */
+}
+.delete-button {
+  padding: 3px;
+  border-radius: 80px;
+}
+.delete-button :hover {
+  outline: none;
+  background-color: #555;
+}
+.todo-text {
+  color: #fff !important;
+  margin-right: auto;
+  font-size: 16px !important;
+}
+.span-button {
+  margin-left: auto;
+  display: block;
+  padding: 5px;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px !important;
+  cursor: pointer;
+}
+.span-button:hover {
+  background-color: rgb(52, 53, 53);
+  border-radius: 80px;
+  color: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+.face {
+  width: 100px;
+  z-index: 100;
+  height: 100px;
+  /* margin: auto; */
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 30%;
+}
+.not-found {
+  color: #fff;
+  top: 60%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 30%;
+}

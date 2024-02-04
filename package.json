@@ -1,0 +1,70 @@
+{
+  "name": "VA-TOOL",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "author": "nam",
+  "description": "tracking app",
+  "repository": {
+    "url": "https://github.com/nealnt69/tracking-app.git"
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.65",
+    "@electron-forge/maker-deb": "^6.0.0-beta.65",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.65",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.65",
+    "@electron-forge/maker-zip": "^6.0.0-beta.65",
+    "electron": "^19.0.10",
+    "electron-packager": "^15.5.1"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "puppeteer": "^15.5.0",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-stealth": "^2.11.0",
+    "update-electron-app": "^2.0.1",
+    "url-regex": "^5.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "protocols": [
+          {
+            "name": "Electron Fiddle",
+            "schemes": [
+              "tracking-app"
+            ]
+          }
+        ]
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "tracking_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "mimeType": [
+              "x-scheme-handler/tracking-app"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

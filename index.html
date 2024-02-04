@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>VA-TOOL</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+ 
+  <body>
+    <div class="todo-app">
+      <div class="input-section">
+        <textarea id="keyword" type="text" placeholder="Keyword"  rows="3"  ></textarea>
+        <input type="text" id="campaign" placeholder="Campaign" />
+        <input type="text" id="productName" placeholder="Product name" />
+        <input type="number" id="start" placeholder="From" />
+        <input type="number" id="end" placeholder="Start" />
+        <input type="text" id="dailyBudget" placeholder="Daily budget" />
+        <input type="text" id="sku" placeholder="Sku" />
+        <input type="text" id="bid" placeholder="Bid" />
+        <button id="addBtn" type="button" class="add">THÊM</button>
+      </div>
+      <div class="todos">
+        <ul class="todo-list">
+        </ul>
+      </div>
+    </div>
+    <button id="exportExcel" type="button" class="add">XUẤT FILE</button>
+  </body>
+</html>
+
+  <script src="./renderer.js"></script>
+  <script src="./FileSave.js"></script>
+  <script src="./xlsx.js"></script>
+</html>
