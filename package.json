@@ -1,17 +1,18 @@
 {
   "name": "VA-TOOL",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "main.js",
   "license": "MIT",
   "author": "nam",
-  "description": "tracking app",
+  "description": "VA_TOOL",
   "repository": {
-    "url": "https://github.com/nealnt69/tracking-app.git"
+    "url": "https://github.com/Neal6/VA-TOOL.git"
   },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "pack": "electron-builder"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.65",
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "electron-builder": "^24.9.1",
     "electron-squirrel-startup": "^1.0.0",
     "puppeteer": "^15.5.0",
     "puppeteer-extra": "^3.3.4",
@@ -38,7 +40,7 @@
           {
             "name": "Electron Fiddle",
             "schemes": [
-              "tracking-app"
+              "VA-TOOL"
             ]
           }
         ]
@@ -47,7 +49,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "tracking_app"
+            "name": "VA-TOOL"
           }
         },
         {
